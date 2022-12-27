@@ -1,2 +1,2 @@
 # mutual-information
-Implement [MINE](https://arxiv.org/abs/1801.04062)
+Implement [Mutual Information Neural Estimation (MINE)](https://arxiv.org/abs/1801.04062)
