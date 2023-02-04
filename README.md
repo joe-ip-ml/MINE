@@ -3,5 +3,7 @@ Implement Mutual Information Neural Estimation [(paper)](https://arxiv.org/abs/1
 
 
 **Toy Example**
+Calculate mutual information between normal distribution and rolling a dice.
+
 
 **Results**
