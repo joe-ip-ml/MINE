@@ -3,7 +3,7 @@ Implement Mutual Information Neural Estimation [(paper)](https://arxiv.org/abs/1
 
 
 ## Toy Example
-<font size = 22>Calculate mutual information between X = Normal distribution and Y = Rolling a dice, denoted by I(X ; Y)</font>
+Calculate mutual information between X = Normal distribution and Y = Rolling a dice, denoted by I(X ; Y)
 
 
 ## Results
