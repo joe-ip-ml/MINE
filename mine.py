@@ -1,6 +1,5 @@
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
 from tensorflow.keras import layers
 
 
@@ -20,7 +19,6 @@ class func_T(tf.keras.Model):
     def compile(self, opt):
         super(func_T, self).compile()
         self.opt = opt
-
 
     def build(self, input_shape):
         self.Layers = [layers.Dense(units=self.hidden_size,
@@ -44,7 +42,6 @@ class func_T(tf.keras.Model):
         for layer in self.Layers:
             x = layer(x, training=training)
         return x
-
 
     @tf.function
     def MINE(self, inputs, ema_eT, rate=0.001):
@@ -78,7 +75,7 @@ if __name__ == "__main__":
 
     inputs = tf.data.Dataset.zip((joint, marginal))
     T = func_T(hidden_size=400)
-    T.compile(opt=tf.keras.optimizers.Adam(1e-5))
+    T.compile(opt=tf.keras.optimizers.Adam(1e-4))
     iter_num = 10000
     ema_eT = tf.constant(0.0)
     losses = []
@@ -94,3 +91,4 @@ if __name__ == "__main__":
             print("  Lower Bound:",lower_bound.numpy())
             print("  Loss       :",loss.numpy())
             print("  EMA        :", ema_eT.numpy(), "\n")
+
