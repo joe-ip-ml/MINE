@@ -9,7 +9,7 @@ In theory, they are independent so **I(X ; Y) = 0**, the experimental result is 
 
 ## Results
 * Runs in 10000 iterations in our experiment.
-* Loss value is decreasing, the updating process is all right.
+* Loss value is decreasing, the updating process is reasonable.
 * The lower bound gradually flattens around 0, meeting the theorical result.
 <p align="center"><img src="https://github.com/joe-ip-ml/MINE/blob/main/img/loss.png" width="80%"></p>
 <p align="center"><img src="https://github.com/joe-ip-ml/MINE/blob/main/img/lb.png" width="80%"></p> 
