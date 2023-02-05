@@ -7,10 +7,6 @@ def create_initializer(seed=None):
     return tf.keras.initializers.HeNormal(seed=seed)
 
 
-def MA(lb, window_size=200):
-    return [np.mean(lb[i : i + window_size]) for i in range(0, (len(lb) - window_size) + 1)]
-
-
 class func_T(tf.keras.Model):
     def __init__(self, hidden_size=100):
         super(func_T, self).__init__()
