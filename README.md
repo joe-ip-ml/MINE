@@ -1,5 +1,5 @@
 # Mutual Information Neural Estimation (MINE) [(paper)](https://arxiv.org/abs/1801.04062)
-Implement MINE with TensorFlow 2.0
+Implement MINE with TensorFlow 2
 
 ## Toy Example
 Calculate mutual information between X and Y, denoted by **I(X ; Y)**.  
