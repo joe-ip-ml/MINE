@@ -4,7 +4,7 @@ Implement MINE with TensorFlow 2
 ## Toy Example
 Calculate mutual information between X and Y, denoted by **I(X ; Y)**.  
 Let X be sampled from Normal distribution, and Y be random variable denoting the result of the rolling a dice.  
-In theory, they are independent so **I(X ; Y) = 0**, the experimental result is shown below.
+In theory, they are independent so **I(X ; Y) = 0**. The experimental result is shown below.
 
 
 ## Results
