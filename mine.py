@@ -42,7 +42,6 @@ class func_T(tf.keras.Model):
     @tf.function
     def MINE(self, inputs, ema_eT, rate=0.001):
         joint, marginal = inputs
-
         with tf.GradientTape() as tape:
             joint_T = self(joint, training=True)
             marginal_T = self(marginal, training=True)
