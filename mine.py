@@ -59,13 +59,13 @@ class func_T(tf.keras.Model):
 
 if __name__ == "__main__":
     # Toy Example
-    X1 = np.random.uniform(low=-1, high=1, size=(300, 1))
+    X = np.random.uniform(low=-1, high=1, size=(300, 1))
 
     dice = np.arange(1, 7)
-    X2 = np.random.choice(dice, (300, 1)).astype(np.float64)
+    Z = np.random.choice(dice, (300, 1)).astype(np.float64)
 
-    X = np.concatenate([X1, X2], axis=-1)
-    joint = tf.data.Dataset.from_tensor_slices(X).batch(300)
+    joint = np.concatenate([X, Z], axis=-1)
+    joint = tf.data.Dataset.from_tensor_slices(joint).batch(300)
     marginal = joint.map(lambda X: tf.concat([X[:, 0][:, tf.newaxis], tf.random.shuffle(X[:, 1])[:, tf.newaxis]], axis=1))
 
     inputs = tf.data.Dataset.zip((joint, marginal))
