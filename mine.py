@@ -52,7 +52,7 @@ class func_T(tf.keras.Model):
             lower_bound = joint_T - tf.math.log(exp_T)
 
             ema_eT = (1 - rate) * ema_eT + rate * exp_T
-            loss = -(joint_T - (exp_T / tf.stop_gradient(ema_eT)))
+            loss = -(joint_T - (exp_T / tf.stop_gradient(ema_eT)))  # Bias corrected
             grad = tape.gradient(loss, self.Layers.trainable_weights)
             self.opt.apply_gradients(zip(grad, self.Layers.trainable_weights))
             return loss, lower_bound, ema_eT
